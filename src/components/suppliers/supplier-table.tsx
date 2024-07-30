@@ -16,8 +16,12 @@ import {
 import { _suppliers } from "@/_mock/_suppliers";
 import { SupplierTableRow } from "./supplier-table-row";
 import { ScrollArea } from "../ui/scroll-area";
+import { Button } from "../ui/button";
+import { useNavigate } from "react-router-dom";
 
 export default function SupplierTable() {
+  const navigate = useNavigate();
+
   return (
     <Card>
       <CardHeader>
@@ -27,7 +31,7 @@ export default function SupplierTable() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <ScrollArea className="h-[600px] w-full">
+        <ScrollArea className="h-[500px] w-full">
           <Table>
             <TableHeader>
               <TableRow>
@@ -60,11 +64,18 @@ export default function SupplierTable() {
           </Table>
         </ScrollArea>
       </CardContent>
-      <CardFooter>
+      <CardFooter className="justify-between">
         <div className="text-xs text-muted-foreground">
           Total de <strong>{_suppliers?.length ? _suppliers.length : 0}</strong>{" "}
           {_suppliers?.length > 1 ? "fornecedores" : "fornecedor"}
         </div>
+        <Button
+          className="bg-[#00DF7C] hover:bg-green-700"
+          type="button"
+          onClick={() => navigate("/")}
+        >
+          Voltar
+        </Button>
       </CardFooter>
     </Card>
   );
