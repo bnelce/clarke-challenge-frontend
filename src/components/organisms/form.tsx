@@ -23,7 +23,7 @@ import { useForm } from "react-hook-form";
 
 const formSchema = z.object({
   consumo: z
-    .number({ required_error: "Consumo obrigatório" })
+    .string({ required_error: "Consumo obrigatório" })
     .min(1, { message: "Valor inválido" }),
 });
 
