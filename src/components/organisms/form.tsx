@@ -23,7 +23,7 @@ import { useForm } from "react-hook-form";
 
 const formSchema = z.object({
   consumo: z
-    .string({ required_error: "Consumo obrigatório" })
+    .number({ required_error: "Consumo obrigatório" })
     .min(1, { message: "Valor inválido" }),
 });
 
@@ -84,11 +84,4 @@ export function LeadForm() {
       </CardContent>
     </Card>
   );
-}
-function register(
-  arg0: string
-): import("react/jsx-runtime").JSX.IntrinsicAttributes &
-  import("@/components/atoms/input").InputProps &
-  import("react").RefAttributes<HTMLInputElement> {
-  throw new Error("Function not implemented.");
 }
