@@ -18,7 +18,7 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "../ui/form";
+} from "../atoms/form";
 import { useForm } from "react-hook-form";
 
 const formSchema = z.object({
