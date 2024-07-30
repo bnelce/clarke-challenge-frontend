@@ -1,7 +1,7 @@
-import { Badge } from "../ui/badge";
-import { TableCell, TableRow } from "../ui/table";
-import { Rating } from "./ratting";
-import SupplierLogo from "./supplier-logo";
+import { Badge } from "../atoms/badge";
+import { TableCell, TableRow } from "../atoms/table";
+import { Rating } from "../molecules/ratting";
+import SupplierLogo from "../molecules/supplier-logo";
 import { Supplier } from "@/@types/Supplier";
 import { fBRLCurrency } from "@/lib/formatNumber";
 

@@ -1,6 +1,6 @@
 import EolicaBG from "@/assets/energia-eolica00.webp";
-import Header from "@/components/header";
-import SupplierTable from "@/components/suppliers/supplier-table";
+import Header from "@/components/organisms/header";
+import SupplierTable from "@/components/organisms/supplier-table";
 
 function SuppliersList() {
   return (

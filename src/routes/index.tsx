@@ -1,4 +1,4 @@
-import LoadingScreen from "@/components/loading-screen";
+import LoadingScreen from "@/components/organisms/loading-screen";
 import { ElementType, lazy, Suspense } from "react";
 import { Navigate, useRoutes } from "react-router-dom";
 

@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/atoms/button";
 import { useNavigate } from "react-router-dom";
 import logo from "@/assets/clarke-logo.svg";
 

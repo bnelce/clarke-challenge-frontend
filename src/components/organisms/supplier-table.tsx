@@ -5,18 +5,18 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/atoms/card";
 import {
   Table,
   TableBody,
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table";
+} from "@/components/atoms/table";
 import { _suppliers } from "@/_mock/_suppliers";
 import { SupplierTableRow } from "./supplier-table-row";
-import { ScrollArea } from "../ui/scroll-area";
-import { Button } from "../ui/button";
+import { ScrollArea } from "../atoms/scroll-area";
+import { Button } from "../atoms/button";
 import { useNavigate } from "react-router-dom";
 
 export default function SupplierTable() {
