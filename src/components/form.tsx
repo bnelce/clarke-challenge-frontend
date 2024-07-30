@@ -8,8 +8,14 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useNavigate } from "react-router-dom";
 
 export function LeadForm() {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/suppliers");
+  };
+
   return (
     <Card className="mx-auto">
       <CardHeader>
@@ -26,6 +32,7 @@ export function LeadForm() {
           </div>
           <Button
             type="submit"
+            onClick={handleNavigate}
             className="w-full bg-[#00DF7C] hover:bg-green-700"
           >
             Pesquisar
