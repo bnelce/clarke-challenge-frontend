@@ -1,6 +1,4 @@
-import { SiteConfig } from "types";
-
-export const siteConfig: SiteConfig = {
+export const siteConfig = {
   name: "Clarke Energia Challenge",
   description: "The official site of the Clarke Energia Challenge.",
   url: "https://clarke.com.br/",
