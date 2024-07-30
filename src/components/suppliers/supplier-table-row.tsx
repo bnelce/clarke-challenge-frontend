@@ -1,5 +1,6 @@
 import { Badge } from "../ui/badge";
 import { TableCell, TableRow } from "../ui/table";
+import { Rating } from "./ratting";
 import SupplierLogo from "./supplier-logo";
 import { Supplier } from "@/@types/Supplier";
 import { fBRLCurrency } from "@/lib/formatNumber";
@@ -25,7 +26,11 @@ export const SupplierTableRow = ({ supplier }: SupplierTableRowProps) => {
       </TableCell>
       <TableCell className="hidden md:table-cell">{minKwh} kWh</TableCell>
       <TableCell className="hidden md:table-cell">{totalClients} </TableCell>
-      <TableCell className="hidden md:table-cell">{avgRating} </TableCell>
+      <TableCell className="hidden md:table-cell">
+        <div className="flex items-center gap-1">
+          <Rating value={avgRating} /> {avgRating}
+        </div>
+      </TableCell>
     </TableRow>
   );
 };
