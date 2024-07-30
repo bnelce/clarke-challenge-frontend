@@ -8,41 +8,37 @@ import {
 } from "@/components/atoms/card";
 import { Input } from "@/components/atoms/input";
 import { Label } from "@/components/atoms/label";
-import { useNavigate } from "react-router-dom";
-import { useForm, SubmitHandler } from "react-hook-form";
-import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
+import { useFormAction, useNavigate } from "react-router-dom";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 
-// Define o esquema de validação com Yup
-const schema = yup.object().shape({
-  consumo: yup
-    .number()
-    .min(1, "O valor deve ser maior que zero")
-    .required("Consumo de energia é obrigatório"),
+const formSchema = z.object({
+  consumo: z
+    .number({ invalid_type_error: "Consumo obrigatório" })
+    .min(1, { message: "Consumo obrigatório" }),
 });
 
-// Define os tipos para os dados do formulário
-type FormValues = {
-  consumo: number;
-};
+type FormValues = z.infer<typeof formSchema>;
 
 export function LeadForm() {
   const navigate = useNavigate();
 
-  // Configura o useForm com o esquema de validação
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<FormValues>({
-    resolver: yupResolver(schema),
+  const form = useFormAction<FormValues>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      consumo: 0,
+    },
   });
 
-  // Função para lidar com a submissão do formulário
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log(data);
-    navigate("/suppliers");
-  };
+  async function onSubmit(data: FormValues) {
+    try {
+      // TODO: call api to get data
+
+      navigate("/suppliers");
+    } catch (error) {
+      console.log("[ERROR_ON_SUBMIT]", error);
+    }
+  }
 
   return (
     <Card className="mx-auto">
