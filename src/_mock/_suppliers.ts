@@ -2,7 +2,7 @@ export const _suppliers = [
   {
     id: 1,
     name: "2W Energia",
-    logo: "/2w-energia-logo.png",
+    logo: "https://media.glassdoor.com/sqll/4273031/2w-energia-squarelogo-1647420984815.png",
     state: "São Paulo",
     costPerKwh: 0.45,
     minKwh: 2000,
@@ -12,7 +12,7 @@ export const _suppliers = [
   {
     id: 2,
     name: "Abengoa",
-    logo: "/abengoa-logo.png",
+    logo: "https://uploads.jornalcana.com.br/2016/02/aben.jpeg",
     state: "Rio de Janeiro",
     costPerKwh: 0.48,
     minKwh: 2500,
@@ -22,7 +22,7 @@ export const _suppliers = [
   {
     id: 3,
     name: "AES Brasil",
-    logo: "/aes-brasil-logo.png",
+    logo: "https://s3-symbol-logo.tradingview.com/aes-brasil--600.png",
     state: "São Paulo",
     costPerKwh: 0.47,
     minKwh: 2200,
@@ -32,7 +32,7 @@ export const _suppliers = [
   {
     id: 4,
     name: "Casa dos Ventos",
-    logo: "/casa-dos-ventos-logo.png",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcV6RBZTTFo5R9etOhZ_OZrMudTkT4fII9Mw&s",
     state: "Ceará",
     costPerKwh: 0.44,
     minKwh: 2300,
@@ -42,7 +42,7 @@ export const _suppliers = [
   {
     id: 5,
     name: "Eneva",
-    logo: "/eneva-logo.png",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxQjzRs2LOkuT-c3kF6lp0Rvz-mkmnXNrZ-g&s",
     state: "Maranhão",
     costPerKwh: 0.46,
     minKwh: 2400,
@@ -52,7 +52,7 @@ export const _suppliers = [
   {
     id: 6,
     name: "Engie Brasil",
-    logo: "/engie-brasil-logo.png",
+    logo: "https://yt3.googleusercontent.com/2EgBZrfJVHlJdfK1p33eTc60j3j_0NJriJ0_NDnEvfNhCwajI69rXsJV2AwqTl3wIIEMtXbFpw=s900-c-k-c0x00ffffff-no-rj",
     state: "Santa Catarina",
     costPerKwh: 0.49,
     minKwh: 2100,
@@ -62,7 +62,7 @@ export const _suppliers = [
   {
     id: 7,
     name: "Enel Green Power",
-    logo: "/enel-green-power-logo.png",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkVnvd4-3Oeu6TjPEISUKWB_dbRBh67wltfg&s",
     state: "São Paulo",
     costPerKwh: 0.47,
     minKwh: 2200,
@@ -72,7 +72,7 @@ export const _suppliers = [
   {
     id: 8,
     name: "Iberdrola Renováveis Brasil",
-    logo: "/iberdrola-logo.png",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHDM4jNO1tFsGecsvgj-aO0CWzxguaRfP8jLH3nxbeKibzKxWEWdx8QdyZsCKvHojjfpE&usqp=CAU",
     state: "Bahia",
     costPerKwh: 0.43,
     minKwh: 2000,
@@ -82,7 +82,7 @@ export const _suppliers = [
   {
     id: 9,
     name: "Omega Energia",
-    logo: "/omega-energia-logo.png",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8dtfwgDsrE44Agv9VdJC_VcHWR_Artut4MQ&s",
     state: "Minas Gerais",
     costPerKwh: 0.42,
     minKwh: 2300,
@@ -92,7 +92,7 @@ export const _suppliers = [
   {
     id: 10,
     name: "EDP Renováveis Brasil",
-    logo: "/edp-renovaveis-logo.png",
+    logo: "https://logodownload.org/wp-content/uploads/2017/08/edp-logo-0.png",
     state: "Espírito Santo",
     costPerKwh: 0.45,
     minKwh: 2100,
@@ -102,7 +102,7 @@ export const _suppliers = [
   {
     id: 11,
     name: "CPFL Renováveis",
-    logo: "/cpfl-renovaveis-logo.png",
+    logo: "https://media.licdn.com/dms/image/C4E0BAQEuRURj_jSr2g/company-logo_200_200/0/1631328851340?e=2147483647&v=beta&t=8ZiVxySo1wIGliAOst_gaSsIpLztqSyEGRGX7VjHIZs",
     state: "São Paulo",
     costPerKwh: 0.5,
     minKwh: 2500,
@@ -112,7 +112,7 @@ export const _suppliers = [
   {
     id: 12,
     name: "Renova Energia",
-    logo: "/renova-energia-logo.png",
+    logo: "https://www.abgd.com.br/portal/wp-content/uploads/jet-engine-forms/7/2022/10/280881424_4986427788059639_2079786146419613029_n.jpg",
     state: "Minas Gerais",
     costPerKwh: 0.48,
     minKwh: 2200,
@@ -122,7 +122,7 @@ export const _suppliers = [
   {
     id: 13,
     name: "Solatio Energia",
-    logo: "/solatio-energia-logo.png",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyA5xImavZhk0_0bqeu3H2A_GQpTW34gbeJRoW3iPit2Kf1WZvczQVTMuelkqmQSfGp9E&usqp=CAU",
     state: "Pernambuco",
     costPerKwh: 0.43,
     minKwh: 2400,
@@ -132,7 +132,7 @@ export const _suppliers = [
   {
     id: 14,
     name: "Blue Sol Energia Solar",
-    logo: "/blue-sol-logo.png",
+    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRct6SwhBxl7_6Pthg8gWD9yhXLo6A-afVdQw&s",
     state: "São Paulo",
     costPerKwh: 0.45,
     minKwh: 2200,
@@ -142,7 +142,7 @@ export const _suppliers = [
   {
     id: 15,
     name: "Ventos do Sul",
-    logo: "/ventos-do-sul-logo.png",
+    logo: "https://media.licdn.com/dms/image/C5603AQFJ2Ktq5p4grQ/profile-displayphoto-shrink_200_200/0/1517604417975?e=2147483647&v=beta&t=W9AhV3J8Ivuth9vo2ln8UVHqDi2NYvkgFI6P3uRVU_0",
     state: "Rio Grande do Sul",
     costPerKwh: 0.46,
     minKwh: 2100,
@@ -152,7 +152,7 @@ export const _suppliers = [
   {
     id: 16,
     name: "Cemig",
-    logo: "/cemig-logo.png",
+    logo: "https://assets.hgbrasil.com/finance/companies/big/cemig.png",
     state: "Minas Gerais",
     costPerKwh: 0.47,
     minKwh: 2300,
@@ -162,7 +162,7 @@ export const _suppliers = [
   {
     id: 17,
     name: "Alupar",
-    logo: "/alupar-logo.png",
+    logo: "https://media.licdn.com/dms/image/C4E0BAQHOgCxiV073oA/company-logo_200_200/0/1631325214086?e=2147483647&v=beta&t=qF0bjNCVlkjMBUEfjOjzLp4PJjXlhk2I9aCXfapPMEA",
     state: "São Paulo",
     costPerKwh: 0.44,
     minKwh: 2000,
@@ -172,7 +172,7 @@ export const _suppliers = [
   {
     id: 18,
     name: "Neonergia",
-    logo: "/neonergia-logo.png",
+    logo: "https://play-lh.googleusercontent.com/dLS3GhNV8r2rDzUK-nL1Yg0SWjO0smadHnPe8UU54u5Tejvcrd0poKYIhPQqIT7uGLU",
     state: "Bahia",
     costPerKwh: 0.42,
     minKwh: 2400,
@@ -182,7 +182,7 @@ export const _suppliers = [
   {
     id: 19,
     name: "Volta Energia",
-    logo: "/volta-energia-logo.png",
+    logo: "https://media.licdn.com/dms/image/C4E0BAQEpXldE5hcHrw/company-logo_200_200/0/1630655206710?e=2147483647&v=beta&t=iErSJV-6f_oxsbGgjG009wG_mix4pnrtfnGWMy6FJHE",
     state: "Rio de Janeiro",
     costPerKwh: 0.41,
     minKwh: 2500,
@@ -192,7 +192,7 @@ export const _suppliers = [
   {
     id: 20,
     name: "Canadian Solar",
-    logo: "/canadian-solar-logo.png",
+    logo: "https://asset.brandfetch.io/id3fpve49Z/idFiIYtAOm.jpeg",
     state: "São Paulo",
     costPerKwh: 0.48,
     minKwh: 2100,

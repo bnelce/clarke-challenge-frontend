@@ -12,12 +12,12 @@ function SuppliersList() {
         className="flex bg-cover bg-center min-h-screen"
         style={{ backgroundImage: `url(${EolicaBG})` }}
       >
-        <div className="flex flex-row w-full bg-black bg-opacity-50 items-center justify-center">
+        <div className="flex flex-row w-full bg-black bg-opacity-50 items-center justify-center py-6">
           <SupplierTable />
         </div>
       </main>
       <footer className="bg-white text-foreground text-center py-4">
-        &copy; 2024 Clarke Energia. Todos os direitos reservados.
+        &copy; 2024 Clarke Energia.
       </footer>
     </>
   );

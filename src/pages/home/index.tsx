@@ -21,7 +21,7 @@ function Home() {
         </div>
       </main>
       <footer className="bg-white text-foreground text-center py-4">
-        &copy; 2024 Clarke Energia. Todos os direitos reservados.
+        &copy; 2024 Clarke Energia.
       </footer>
     </>
   );
