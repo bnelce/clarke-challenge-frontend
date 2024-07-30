@@ -8,21 +8,14 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "./ui/select";
 
 export function LeadForm() {
   return (
-    <Card className="mx-auto max-w-sm">
+    <Card className="mx-auto">
       <CardHeader>
-        <CardTitle className="text-xl">Calcule seu desconto</CardTitle>
+        <CardTitle className="text-xl">Escolha seu fornecedor</CardTitle>
         <CardDescription>
-          Descubra se sua empresa já pode começar a economizar:
+          Descubra qual empresa pode te ajudar a economizar:
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -31,23 +24,11 @@ export function LeadForm() {
             <Label htmlFor="email">Consumo de energia mensal</Label>
             <Input id="consumo" type="number" placeholder="3000 kWh" required />
           </div>
-          <div className="grid gap-2">
-            <Label htmlFor="energyUsage">Consumo de Energia</Label>
-            <Select>
-              <SelectTrigger className="w-[180px]">
-                <SelectValue placeholder="Theme" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="light">Enel</SelectItem>
-                <SelectItem value="dark">Coelba</SelectItem>
-                <SelectItem value="system">Light</SelectItem>
-                <SelectItem value="dasd">Energisa</SelectItem>
-                <SelectItem value="adsa">Cemig</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-          <Button type="submit" className="w-full">
-            Calcular
+          <Button
+            type="submit"
+            className="w-full bg-[#00DF7C] hover:bg-green-700"
+          >
+            Pesquisar
           </Button>
         </div>
       </CardContent>

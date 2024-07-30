@@ -10,7 +10,7 @@ const Header: React.FC = () => {
         {/* <Nav /> */}
         <a
           href="#"
-          className="bg-[#00DF7C] text-white py-2 px-4 rounded hidden lg:block"
+          className="bg-[#00DF7C] hover:bg-green-700 text-white py-2 px-4 rounded hidden lg:block"
         >
           Seja nosso cliente
         </a>
