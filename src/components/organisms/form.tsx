@@ -64,7 +64,7 @@ export function LeadForm() {
                 <FormItem>
                   <FormLabel>Consumo de energia mensal</FormLabel>
                   <FormControl>
-                    <Input placeholder="3000 kWh" {...field} />
+                    <Input placeholder="3000 kWh" type="number" {...field} />
                   </FormControl>
                   <FormDescription>
                     Insira sua média de consumo de energia.
