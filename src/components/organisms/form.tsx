@@ -7,33 +7,39 @@ import {
   CardTitle,
 } from "@/components/atoms/card";
 import { Input } from "@/components/atoms/input";
-import { Label } from "@/components/atoms/label";
-import { useFormAction, useNavigate } from "react-router-dom";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { useNavigate } from "react-router-dom";
 import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "../ui/form";
+import { useForm } from "react-hook-form";
 
 const formSchema = z.object({
   consumo: z
-    .number({ invalid_type_error: "Consumo obrigatório" })
-    .min(1, { message: "Consumo obrigatório" }),
+    .string({ required_error: "Consumo obrigatório" })
+    .min(1, { message: "Valor inválido" }),
 });
-
-type FormValues = z.infer<typeof formSchema>;
 
 export function LeadForm() {
   const navigate = useNavigate();
 
-  const form = useFormAction<FormValues>({
+  const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
       consumo: 0,
     },
   });
 
-  async function onSubmit(data: FormValues) {
+  async function onSubmit() {
     try {
       // TODO: call api to get data
-
       navigate("/suppliers");
     } catch (error) {
       console.log("[ERROR_ON_SUBMIT]", error);
@@ -49,30 +55,40 @@ export function LeadForm() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4">
-          <div className="grid gap-2">
-            <Label htmlFor="consumo">Consumo de energia mensal</Label>
-            <Input
-              id="consumo"
-              type="number"
-              placeholder="3000 kWh"
-              {...register("consumo")}
-              className={`p-2 border rounded ${
-                errors.consumo ? "border-red-500" : ""
-              }`}
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            <FormField
+              control={form.control}
+              name="consumo"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Consumo de energia mensal</FormLabel>
+                  <FormControl>
+                    <Input placeholder="3000 kWh" {...field} />
+                  </FormControl>
+                  <FormDescription>
+                    Insira sua média de consumo de energia.
+                  </FormDescription>
+                  <FormMessage />
+                </FormItem>
+              )}
             />
-            {errors.consumo && (
-              <p className="text-red-500">{errors.consumo.message}</p>
-            )}
-          </div>
-          <Button
-            type="submit"
-            className="w-full bg-[#00DF7C] hover:bg-green-700"
-          >
-            Pesquisar
-          </Button>
-        </form>
+            <Button
+              className="w-full bg-[#00DF7C] hover:bg-green-700"
+              type="submit"
+            >
+              Pesquisar
+            </Button>
+          </form>
+        </Form>
       </CardContent>
     </Card>
   );
+}
+function register(
+  arg0: string
+): import("react/jsx-runtime").JSX.IntrinsicAttributes &
+  import("@/components/atoms/input").InputProps &
+  import("react").RefAttributes<HTMLInputElement> {
+  throw new Error("Function not implemented.");
 }
