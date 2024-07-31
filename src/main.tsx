@@ -10,7 +10,9 @@ import { store, persistor } from "./redux/store";
 import { PersistGate } from "redux-persist/lib/integration/react";
 
 const client = new ApolloClient({
-  uri: "http://localhost:4000/graphql", // URL da sua API GraphQL
+  uri:
+    import.meta.env.VITE_GRAPHQL_ENDPOINT ||
+    "https://demo.abneroliveira.eti.br/graphql",
   cache: new InMemoryCache(),
 });
 
