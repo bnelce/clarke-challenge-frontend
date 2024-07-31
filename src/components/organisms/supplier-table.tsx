@@ -18,8 +18,13 @@ import { SupplierTableRow } from "./supplier-table-row";
 import { ScrollArea } from "../atoms/scroll-area";
 import { Button } from "../atoms/button";
 import { useNavigate } from "react-router-dom";
+import { Supplier } from "@/@types/Supplier";
 
-export default function SupplierTable() {
+type SupplierTableProps = {
+  suppliers: Supplier[];
+};
+
+export default function SupplierTable({ suppliers }: SupplierTableProps) {
   const navigate = useNavigate();
 
   return (
@@ -57,7 +62,7 @@ export default function SupplierTable() {
             </TableHeader>
 
             <TableBody>
-              {_suppliers.map((supplier) => (
+              {suppliers.map((supplier) => (
                 <SupplierTableRow key={supplier.id} supplier={supplier} />
               ))}
             </TableBody>

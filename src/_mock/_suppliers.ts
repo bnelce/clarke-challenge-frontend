@@ -7,7 +7,7 @@ export const _suppliers = [
     costPerKwh: 0.45,
     minKwh: 2000,
     totalClients: 1500,
-    avgRating: 4.4,
+    averageRating: 4.4,
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const _suppliers = [
     costPerKwh: 0.48,
     minKwh: 2500,
     totalClients: 1200,
-    avgRating: 4.2,
+    averageRating: 4.2,
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const _suppliers = [
     costPerKwh: 0.47,
     minKwh: 2200,
     totalClients: 1300,
-    avgRating: 4.3,
+    averageRating: 4.3,
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const _suppliers = [
     costPerKwh: 0.44,
     minKwh: 2300,
     totalClients: 1100,
-    avgRating: 4.5,
+    averageRating: 4.5,
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ export const _suppliers = [
     costPerKwh: 0.46,
     minKwh: 2400,
     totalClients: 1000,
-    avgRating: 4.0,
+    averageRating: 4.0,
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ export const _suppliers = [
     costPerKwh: 0.49,
     minKwh: 2100,
     totalClients: 1600,
-    avgRating: 4.6,
+    averageRating: 4.6,
   },
   {
     id: 7,
@@ -67,7 +67,7 @@ export const _suppliers = [
     costPerKwh: 0.47,
     minKwh: 2200,
     totalClients: 1700,
-    avgRating: 4.4,
+    averageRating: 4.4,
   },
   {
     id: 8,
@@ -77,7 +77,7 @@ export const _suppliers = [
     costPerKwh: 0.43,
     minKwh: 4000,
     totalClients: 1800,
-    avgRating: 4.7,
+    averageRating: 4.7,
   },
   {
     id: 9,
@@ -87,7 +87,7 @@ export const _suppliers = [
     costPerKwh: 0.42,
     minKwh: 2300,
     totalClients: 1900,
-    avgRating: 4.3,
+    averageRating: 4.3,
   },
   {
     id: 10,
@@ -97,7 +97,7 @@ export const _suppliers = [
     costPerKwh: 0.45,
     minKwh: 800,
     totalClients: 1400,
-    avgRating: 4.5,
+    averageRating: 4.5,
   },
   {
     id: 11,
@@ -107,7 +107,7 @@ export const _suppliers = [
     costPerKwh: 0.5,
     minKwh: 2500,
     totalClients: 1600,
-    avgRating: 4.4,
+    averageRating: 4.4,
   },
   {
     id: 12,
@@ -117,7 +117,7 @@ export const _suppliers = [
     costPerKwh: 0.48,
     minKwh: 2200,
     totalClients: 1300,
-    avgRating: 4.3,
+    averageRating: 4.3,
   },
   {
     id: 13,
@@ -127,7 +127,7 @@ export const _suppliers = [
     costPerKwh: 0.43,
     minKwh: 2400,
     totalClients: 1500,
-    avgRating: 4.5,
+    averageRating: 4.5,
   },
   {
     id: 14,
@@ -137,7 +137,7 @@ export const _suppliers = [
     costPerKwh: 0.45,
     minKwh: 3200,
     totalClients: 1100,
-    avgRating: 4.2,
+    averageRating: 4.2,
   },
   {
     id: 15,
@@ -147,7 +147,7 @@ export const _suppliers = [
     costPerKwh: 0.46,
     minKwh: 1100,
     totalClients: 1200,
-    avgRating: 4.6,
+    averageRating: 4.6,
   },
   {
     id: 16,
@@ -157,7 +157,7 @@ export const _suppliers = [
     costPerKwh: 0.47,
     minKwh: 2300,
     totalClients: 1700,
-    avgRating: 4.3,
+    averageRating: 4.3,
   },
   {
     id: 17,
@@ -167,7 +167,7 @@ export const _suppliers = [
     costPerKwh: 0.44,
     minKwh: 3500,
     totalClients: 1800,
-    avgRating: 4.5,
+    averageRating: 4.5,
   },
   {
     id: 18,
@@ -177,7 +177,7 @@ export const _suppliers = [
     costPerKwh: 0.42,
     minKwh: 2400,
     totalClients: 1500,
-    avgRating: 4.4,
+    averageRating: 4.4,
   },
   {
     id: 19,
@@ -187,7 +187,7 @@ export const _suppliers = [
     costPerKwh: 0.41,
     minKwh: 2500,
     totalClients: 1600,
-    avgRating: 4.2,
+    averageRating: 4.2,
   },
   {
     id: 20,
@@ -197,6 +197,6 @@ export const _suppliers = [
     costPerKwh: 0.48,
     minKwh: 2100,
     totalClients: 1400,
-    avgRating: 4.3,
+    averageRating: 4.3,
   },
 ];

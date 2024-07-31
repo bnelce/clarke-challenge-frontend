@@ -6,11 +6,11 @@ export type Supplier = {
   costPerKwh: number;
   minKwh: number;
   totalClients: number;
-  avgRating: number;
+  averageRating: number;
 };
 
 export type SupplierState = {
-  isLoading: boolean;
+  loading: boolean;
   error: string | null;
-  supplierByConsumptionList: Supplier[];
+  data: Supplier[];
 };

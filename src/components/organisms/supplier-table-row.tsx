@@ -10,7 +10,7 @@ type SupplierTableRowProps = {
 };
 
 export const SupplierTableRow = ({ supplier }: SupplierTableRowProps) => {
-  const { name, logo, state, costPerKwh, minKwh, totalClients, avgRating } =
+  const { name, logo, state, costPerKwh, minKwh, totalClients, averageRating } =
     supplier;
   return (
     <TableRow>
@@ -28,7 +28,7 @@ export const SupplierTableRow = ({ supplier }: SupplierTableRowProps) => {
       <TableCell className="hidden md:table-cell">{totalClients} </TableCell>
       <TableCell className="hidden md:table-cell">
         <div className="flex items-center gap-1">
-          <Rating value={avgRating} /> {avgRating}
+          <Rating value={averageRating} /> {averageRating}
         </div>
       </TableCell>
     </TableRow>

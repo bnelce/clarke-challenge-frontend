@@ -20,6 +20,8 @@ import {
   FormMessage,
 } from "../atoms/form";
 import { useForm } from "react-hook-form";
+import { getSuppliersByConsumption } from "@/redux/slices/supplier";
+import { useDispatch } from "@/redux/store";
 
 const formSchema = z.object({
   consumo: z
@@ -29,6 +31,7 @@ const formSchema = z.object({
 
 export function LeadForm() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const form = useForm({
     resolver: zodResolver(formSchema),
@@ -37,14 +40,15 @@ export function LeadForm() {
     },
   });
 
-  async function onSubmit() {
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
     try {
-      // TODO: call api to get data
+      console.log("submit", data.consumo);
+      dispatch(getSuppliersByConsumption(Number(data.consumo)));
       navigate("/suppliers");
     } catch (error) {
       console.log("[ERROR_ON_SUBMIT]", error);
     }
-  }
+  };
 
   return (
     <Card className="mx-auto">

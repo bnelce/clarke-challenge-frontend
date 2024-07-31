@@ -2,15 +2,15 @@ import { gql } from "@apollo/client";
 
 export const GET_SUPPLIERS_BY_CONSUMPTION = gql`
   query ($consumption: Int!) {
-    suppliers'(consumption: $consumption) {
+    suppliers(consumption: $consumption) {
       id
       name
       logo
       state
-      costPerKwh
-      minKwh
-      totalClients
-      avgRating
+      cost_per_kwh
+      min_kwh
+      total_clients
+      average_rating
     }
   }
 `;

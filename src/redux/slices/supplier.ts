@@ -2,16 +2,16 @@ import { createSlice } from "@reduxjs/toolkit";
 // utils
 //
 import { Supplier, SupplierState } from "@/@types/Supplier";
-import { useQuery } from "@apollo/client";
 import { GET_SUPPLIERS_BY_CONSUMPTION } from "@/hooks/get-suppliers-by-consumption/queries";
 import { dispatch } from "../store";
+import client from "@/apollo/client";
 
 // ----------------------------------------------------------------------
 
 const initialState: SupplierState = {
-  isLoading: false,
+  loading: false,
   error: null,
-  supplierByConsumptionList: [] as Supplier[],
+  data: [] as Supplier[],
 };
 
 const slice = createSlice({
@@ -20,19 +20,19 @@ const slice = createSlice({
   reducers: {
     // START LOADING
     startLoading(state) {
-      state.isLoading = true;
+      state.loading = true;
     },
 
     // HAS ERROR
     hasError(state, action) {
       state.error = action.payload;
-      state.isLoading = false;
+      state.loading = false;
     },
 
     // GET SUPPLIERS
     getSuppliersSuccess(state, action) {
-      state.supplierByConsumptionList = action.payload;
-      state.isLoading = false;
+      state.data = action.payload;
+      state.loading = false;
     },
   },
 });
@@ -45,12 +45,13 @@ export default slice.reducer;
 
 // ----------------------------------------------------------------------
 
-export function getSuppliersByConsumption(value: number) {
+export function getSuppliersByConsumption(consumption: number) {
   return async () => {
     dispatch(slice.actions.startLoading());
     try {
-      const { data } = useQuery(GET_SUPPLIERS_BY_CONSUMPTION, {
-        variables: { consumption: value },
+      const { data } = await client.query({
+        query: GET_SUPPLIERS_BY_CONSUMPTION,
+        variables: { consumption },
       });
       console.log(data);
       dispatch(slice.actions.getSuppliersSuccess(data));
