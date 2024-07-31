@@ -8,3 +8,9 @@ export type Supplier = {
   totalClients: number;
   avgRating: number;
 };
+
+export type SupplierState = {
+  isLoading: boolean;
+  error: string | null;
+  supplierByConsumptionList: Supplier[];
+};
