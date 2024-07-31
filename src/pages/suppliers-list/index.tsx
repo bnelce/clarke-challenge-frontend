@@ -15,6 +15,8 @@ function SuppliersList() {
     return <div>{error}</div>;
   }
 
+  console.log("data", data);
+
   return (
     <>
       <div className="flex flex-col">

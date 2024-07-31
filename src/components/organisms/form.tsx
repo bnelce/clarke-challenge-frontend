@@ -40,10 +40,10 @@ export function LeadForm() {
     },
   });
 
-  const onSubmit = async (data: z.infer<typeof formSchema>) => {
+  const onSubmit = async (data: { consumo: string }) => {
     try {
       console.log("submit", data.consumo);
-      dispatch(getSuppliersByConsumption(Number(data.consumo)));
+      dispatch(getSuppliersByConsumption(data.consumo));
       navigate("/suppliers");
     } catch (error) {
       console.log("[ERROR_ON_SUBMIT]", error);
@@ -68,7 +68,7 @@ export function LeadForm() {
                 <FormItem>
                   <FormLabel>Consumo de energia mensal</FormLabel>
                   <FormControl>
-                    <Input placeholder="3000 kWh" type="number" {...field} />
+                    <Input placeholder="3000 kWh" type="string" {...field} />
                   </FormControl>
                   <FormDescription>
                     Insira sua média de consumo de energia.

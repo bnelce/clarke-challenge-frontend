@@ -45,16 +45,40 @@ export default slice.reducer;
 
 // ----------------------------------------------------------------------
 
-export function getSuppliersByConsumption(consumption: number) {
+export function getSuppliersByConsumption(consumption: string) {
   return async () => {
     dispatch(slice.actions.startLoading());
     try {
       const { data } = await client.query({
         query: GET_SUPPLIERS_BY_CONSUMPTION,
-        variables: { consumption },
+        variables: { consumption: Number(consumption) },
       });
-      console.log(data);
-      dispatch(slice.actions.getSuppliersSuccess(data));
+
+      const suppliersData = data.suppliers.map(
+        (supplier: {
+          id: number;
+          name: string;
+          logo: string;
+          state: string;
+          cost_per_kwh: number;
+          min_kwh: number;
+          total_clients: number;
+          average_rating: number;
+        }) => {
+          return {
+            id: supplier.id,
+            name: supplier.name,
+            logo: supplier.logo,
+            state: supplier.state,
+            costPerKwh: supplier.cost_per_kwh,
+            minKwh: supplier.min_kwh,
+            totalClients: supplier.total_clients,
+            averageRating: supplier.average_rating,
+          };
+        }
+      );
+
+      dispatch(slice.actions.getSuppliersSuccess(suppliersData));
     } catch (error) {
       console.error(error);
       dispatch(slice.actions.hasError(error));
