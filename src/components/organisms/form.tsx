@@ -36,7 +36,7 @@ export function LeadForm() {
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      consumo: 0,
+      consumo: "",
     },
   });
 
