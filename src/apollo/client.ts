@@ -8,6 +8,4 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-console.log("VITE_GRAPHQL_ENDPOINT", import.meta.env.VITE_GRAPHQL_ENDPOINT);
-
 export default client;

@@ -42,11 +42,10 @@ export function LeadForm() {
 
   const onSubmit = async (data: { consumo: string }) => {
     try {
-      console.log("submit", data.consumo);
       dispatch(getSuppliersByConsumption(data.consumo));
       navigate("/suppliers");
     } catch (error) {
-      console.log("[ERROR_ON_SUBMIT]", error);
+      console.error("[ERROR_ON_SUBMIT]", error);
     }
   };
 
