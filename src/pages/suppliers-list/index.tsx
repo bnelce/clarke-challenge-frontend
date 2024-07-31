@@ -1,4 +1,6 @@
 import EolicaBG from "@/assets/energia-eolica00.webp";
+import { Footer } from "@/components/molecules/footer";
+import { NoData } from "@/components/molecules/no-data";
 import Header from "@/components/organisms/header";
 import LoadingScreen from "@/components/organisms/loading-screen";
 import SupplierTable from "@/components/organisms/supplier-table";
@@ -25,16 +27,10 @@ function SuppliersList() {
         style={{ backgroundImage: `url(${EolicaBG})` }}
       >
         <div className="flex flex-row w-full bg-black bg-opacity-50 items-center justify-center py-6">
-          {data.length > 0 ? (
-            <SupplierTable suppliers={data} />
-          ) : (
-            <div>no data</div>
-          )}
+          {data.length > 0 ? <SupplierTable suppliers={data} /> : <NoData />}
         </div>
       </main>
-      <footer className="bg-white text-foreground text-center py-4">
-        &copy; 2024 Clarke Energia.
-      </footer>
+      <Footer />
     </>
   );
 }

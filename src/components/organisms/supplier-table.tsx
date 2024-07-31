@@ -13,7 +13,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/atoms/table";
-import { _suppliers } from "@/_mock/_suppliers";
 import { SupplierTableRow } from "./supplier-table-row";
 import { ScrollArea } from "../atoms/scroll-area";
 import { Button } from "../atoms/button";
@@ -71,8 +70,8 @@ export default function SupplierTable({ suppliers }: SupplierTableProps) {
       </CardContent>
       <CardFooter className="justify-between">
         <div className="text-xs text-muted-foreground">
-          Total de <strong>{_suppliers?.length ? _suppliers.length : 0}</strong>{" "}
-          {_suppliers?.length > 1 ? "fornecedores" : "fornecedor"}
+          Total de <strong>{suppliers?.length ? suppliers.length : 0}</strong>{" "}
+          {suppliers?.length > 1 ? "fornecedores" : "fornecedor"}
         </div>
         <Button
           className="bg-[#00DF7C] hover:bg-green-700"
